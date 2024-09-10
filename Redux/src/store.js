@@ -1,26 +1,9 @@
-import { createStoreHook } from "react-redux";
+import {configureStore} from '@reduxjs/toolkit'
+import colorReducer from './color/colorSlice'
 
-const initialState = {
-    value:0
-};
 
-function appReducer(prevState = initialState,action){
-    switch(action.type){
-        case 'increment':
-            return {
-                ...prevState,
-                value:prevState.value+1
-            }
-        case 'decrement':
-            return {
-                ...prevState,
-                value:prevState.value-1
-            }
-        default:
-            return prevState;
+export default configureStore({
+    reducer:{
+        color:colorReducer
     }
-}
-
-const store = createStoreHook(appReducer)
-
-export default store
+})

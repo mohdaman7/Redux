@@ -2,6 +2,9 @@ import { useState } from 'react'
 import {Provider} from 'react-redux'
 import './App.css'
 import store from './store'
+import Usage from './Usage'
+import Home from './Home'
+
 
 
 
@@ -10,11 +13,10 @@ function App() {
 
   return (
     <>
-       <Provider store={store}>
         <div>
-          
+          <Home/>
         </div>
-       </Provider>
+
     </>
   )
 }
