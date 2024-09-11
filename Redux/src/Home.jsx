@@ -1,12 +1,14 @@
 import React from 'react'
 import Counter from './Counter'
 import Aside from './Aside'
+import Usage from './Usage'
 
 function Home() {
   return (
     <div>
-      <Counter/>
-      <Aside/>
+      {/* <Counter/>
+      <Aside/> */}
+      <Usage/>
     </div>
   )
 }
